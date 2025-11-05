@@ -1,3 +1,3 @@
 # Projeto CRUD com React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de gerenciamento de séries assistidas com React para a Disciplina de Desenvolvimento Frontend.
