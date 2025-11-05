@@ -1,0 +1,35 @@
+.serieList{
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #f9f9f9;
+}
+.serieList h2{
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #333;
+}
+button{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.btn .edit {
+    background-color: #1E1E1E;
+    color: white;
+    
+}
+.btn .delete {
+    background-color: #BC0000;
+    color: white;
+}
