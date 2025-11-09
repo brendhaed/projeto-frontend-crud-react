@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import "./serieList.css";
 
-export default function SerieList({titulo, numTemporadas, dataLanc, diretor, produtora, categoria, dataAssistiu}) {
+export default function SerieList({id, titulo, numTemporadas, dataLanc, diretor, produtora, categoria, dataAssistiu, onDelete}) {
     
     return(
-            <div className="serieList">
+            <div className="serieList"> 
                 <h2>Titulo: {titulo}</h2>
                 <h3>Número de temporadas: {numTemporadas}</h3>
                 <p>Data de lançamento: {dataLanc}</p>
@@ -12,8 +13,8 @@ export default function SerieList({titulo, numTemporadas, dataLanc, diretor, pro
                 <p>Categoria: {categoria}</p>
                 <p>Data do último episódio assistido: {dataAssistiu}</p>
                 <div className="btn">
-                    <button className="edit">Editar</button>
-                    <button className="delete">Excluir</button>
+                    <Link to={`/serie-edit/${id}`}><button className="edit">Editar</button></Link>
+                    <button className="delete" onClick={() => onDelete(id)}>Excluir</button>
                 </div>
         </div> 
     )
