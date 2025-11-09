@@ -120,7 +120,19 @@ function App() {
     setSeriesExibidas(seriesFiltradas);
   };
 
-  const [serieEdit, setSerieEdit] = useState(null);
+  // editar series
+  const editarSerie = (serieAtualizada) => {
+  const serieEditada = series.map((serie) =>
+    serie.id === serieAtualizada.id ? serieAtualizada : serie
+  )
+  // Atualiza o estado principal
+    setSeries(serieEditada);
+    setSeriesExibidas(serieEditada); 
+  }
+
+  const [serieEdit, setSerieEdit] = useState(null); 
+
+
 
   return (
     <>
@@ -132,7 +144,7 @@ function App() {
         <Route path="/formulario" element={<SerieForm />} />
         <Route
           path="/serie-edit/:id"
-          element={<SerieEdit series={series} setSeries={setSeries} />}
+          element={<SerieEdit series={series} onEdit={editarSerie} />}
         />
 
         <Route
@@ -154,7 +166,7 @@ function App() {
                     categoria={serie.categoria}
                     dataAssistiu={serie.dataAssistiu}
                     onDelete={removerSerie}
-                    onEdit={() => setSerieEdit(serie)}
+                    
                   />
                 ))
               ) : (
