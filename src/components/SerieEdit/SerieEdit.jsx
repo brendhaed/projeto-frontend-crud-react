@@ -41,10 +41,10 @@ export function SerieEdit({ series, onEdit }) {
     }
 
     return (
-        <div className="serie-edit-container">
+        <div className="serie-edit">
             <h2>Editar Série: {formData.titulo}</h2>
             
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}> 
                 
                 <div>
                     <label htmlFor="titulo">Título:</label>

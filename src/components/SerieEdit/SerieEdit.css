@@ -1,0 +1,41 @@
+.serie-edit {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: "Poppins", sans-serif;
+}
+.serie-edit label{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 15px;
+}
+.serie-edit input,select{
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.serie-edit input:focus,select:focus{
+    border-color: #ffa56d;
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+    outline: none;
+}
+.serie-edit button{
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}

@@ -21,6 +21,7 @@ function App() {
       produtora: "AMC",
       categoria: "Drama / Crime",
       dataAssistiu: "15/09/2013",
+      img: "https://br.web.img3.acsta.net/pictures/14/03/31/19/28/462555.jpg"
     },
     {
       id: 2,
@@ -132,6 +133,17 @@ function App() {
 
   const [serieEdit, setSerieEdit] = useState(null); 
 
+  // adicionar series
+  const adicionarSerie = (novaSerie) => {
+    const novoId = series.length > 0 ? Math.max(...series.map(s => s.id)) + 1 : 1;
+    const serieCompleta = {
+        ...novaSerie,
+        id: novoId,
+        numTemporadas: Number(novaSerie.numTemporadas) 
+    };
+    setSeries(prevSeries => [...prevSeries, serieCompleta]);
+  }
+
 
 
   return (
@@ -141,7 +153,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<About />} />
-        <Route path="/formulario" element={<SerieForm />} />
+        <Route path="/formulario" element={<SerieForm onAdd={adicionarSerie} />} />
         <Route
           path="/serie-edit/:id"
           element={<SerieEdit series={series} onEdit={editarSerie} />}

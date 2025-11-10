@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "./serieList.css";
 
-export default function SerieList({id, titulo, numTemporadas, dataLanc, diretor, produtora, categoria, dataAssistiu, onDelete}) {
+export default function SerieList({id, img, titulo, numTemporadas, dataLanc, diretor, produtora, categoria, dataAssistiu, onDelete}) {
     
     return(
-            <div className="serieList"> 
+            <div className="serieList">
+                <div>{img}</div>
                 <h2>Titulo: {titulo}</h2>
                 <h3>Número de temporadas: {numTemporadas}</h3>
                 <p>Data de lançamento: {dataLanc}</p>
