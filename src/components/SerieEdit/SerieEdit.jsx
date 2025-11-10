@@ -136,7 +136,17 @@ export function SerieEdit({ series, onEdit }) {
                     />
                 </div>
 
-                {/* Botão de Submissão */}
+                <div>
+                    <label htmlFor="capaUrl">Imagem:</label>
+                    <input 
+                        type="url" 
+                        id="img" 
+                        name="img" 
+                        value={formData.img || ''} 
+                        onChange={handleChange} 
+                    />
+                </div>
+
                 <button type="submit">
                     Salvar Alterações
                 </button>

@@ -40,8 +40,10 @@ export default function SerieForm({onAdd}) {
         navigate('/series'); 
     };
     return(
-        <div className="formulario" style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-            <h2>Formulário de Cadastro de Séries</h2>
+        <div className="formulario">
+            <div className="form-title">
+                <h2>Formulário de Cadastro de Séries</h2>
+            </div>
             <form onSubmit={handleSubmit}>
                 
                 <div>
@@ -139,6 +141,18 @@ export default function SerieForm({onAdd}) {
                         id="dataAssistiu" 
                         name="dataAssistiu" 
                         value={formData.dataAssistiu}
+                        onChange={handleChange} 
+                        required 
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="img">Imagem:</label>
+                    <input 
+                        type="text" 
+                        id="img" 
+                        name="img" 
+                        value={formData.img} 
                         onChange={handleChange} 
                         required 
                     />

@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -13,4 +14,8 @@ button {
   background-color: #1E1E1E;
   color: white;
   padding: 10px 20px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
 }

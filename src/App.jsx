@@ -21,7 +21,7 @@ function App() {
       produtora: "AMC",
       categoria: "Drama / Crime",
       dataAssistiu: "15/09/2013",
-      img: "https://br.web.img3.acsta.net/pictures/14/03/31/19/28/462555.jpg"
+      img:"https://br.web.img3.acsta.net/pictures/14/03/31/19/28/462555.jpg"
     },
     {
       id: 2,
@@ -32,6 +32,7 @@ function App() {
       produtora: "Netflix",
       categoria: "Ficção científica / Terror",
       dataAssistiu: "01/11/2022",
+      img: "https://i5.walmartimages.com/seo/Stranger-Things-Season-4-Movie-Poster-TV-Series-Quality-Glossy-Print-Photo-Wall-Art-Millie-Bobby-Brown-Sizes-Available-8x10-11x17-16x20-22x28-24x36-2_a6074dae-099d-4ac5-aef1-b7a36ec82858.e9a5cbc0786bb7f891744ada71bee790.jpeg"
     },
     {
       id: 3,
@@ -42,6 +43,7 @@ function App() {
       produtora: "HBO",
       categoria: "Fantasia / Drama",
       dataAssistiu: "19/05/2019",
+      img: "https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: 4,
@@ -52,6 +54,7 @@ function App() {
       produtora: "Netflix",
       categoria: "Fantasia / Ação",
       dataAssistiu: "29/12/2021",
+      img: "https://br.web.img3.acsta.net/pictures/19/11/29/17/57/5161763.jpg"
     },
     {
       id: 5,
@@ -62,6 +65,7 @@ function App() {
       produtora: "NBC",
       categoria: "Comédia",
       dataAssistiu: "16/05/2013",
+      img: "https://m.media-amazon.com/images/M/MV5BZjQwYzBlYzUtZjhhOS00ZDQ0LWE0NzAtYTk4MjgzZTNkZWEzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: 6,
@@ -72,6 +76,7 @@ function App() {
       produtora: "BBC",
       categoria: "Drama histórico / Crime",
       dataAssistiu: "10/04/2022",
+      img:"https://infinitasvidas.wordpress.com/wp-content/uploads/2020/06/peaky-blinders.png"
     },
     {
       id: 7,
@@ -82,6 +87,7 @@ function App() {
       produtora: "Netflix",
       categoria: "Ficção científica / Mistério",
       dataAssistiu: "27/06/2020",
+      img: "https://br.web.img2.acsta.net/pictures/19/06/11/21/33/0075880.jpg"
     },
     {
       id: 8,
@@ -92,6 +98,7 @@ function App() {
       produtora: "NBC",
       categoria: "Comédia / Romance",
       dataAssistiu: "20/05/2004",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcH3X-S9DROy_PrLOUoGs4kbeiu43J8-WKgw&s"
     },
     {
       id: 9,
@@ -102,6 +109,7 @@ function App() {
       produtora: "Amazon Studios",
       categoria: "Ação / Satírica / Super-heróis",
       dataAssistiu: "04/03/2022",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSU7fnUsE4Oq4tp0qCdguUBx0WuDVlCwCJFA&s"
     },
   ]);
 
@@ -126,11 +134,9 @@ function App() {
   const serieEditada = series.map((serie) =>
     serie.id === serieAtualizada.id ? serieAtualizada : serie
   )
-  // Atualiza o estado principal
     setSeries(serieEditada);
     setSeriesExibidas(serieEditada); 
   }
-
   const [serieEdit, setSerieEdit] = useState(null); 
 
   // adicionar series
@@ -143,8 +149,6 @@ function App() {
     };
     setSeries(prevSeries => [...prevSeries, serieCompleta]);
   }
-
-
 
   return (
     <>
@@ -178,6 +182,7 @@ function App() {
                     categoria={serie.categoria}
                     dataAssistiu={serie.dataAssistiu}
                     onDelete={removerSerie}
+                    img={serie.img}
                     
                   />
                 ))
